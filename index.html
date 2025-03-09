@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailWay</title>
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js" defer    ></script>
+    <link rel="stylesheet" href="index.css">
+
+   
+    <div id="menu">
+        <h1 id="title">RAILWAYS</h1>
+        <div id="gameInfo">
+            <input type="text" id="name" placeholder="WHO ARE YOU">
+            <div class="difficulty">
+                <h2>--- Set The Difficulty ---</h2>
+                <div class="options">
+                    <div>
+                        <input type="radio" id="easy" name="Difficulty" value="5x5" checked>
+                        <label for="easy" >5x5</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hard" name="Difficulty" value="7x7">
+                        <label for="hard" >7x7</label>    
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="menu-buttons">
+                <input type="button" id="Rules" value="RULES">
+                <input type="button" value="START GAME"  id="Start">
+            </div>
+        </div>
+        <div class="leader-board" id="leaderBoard">
+            
+            <h1>Leader Board</h1>
+        </div>
+    </div> 
+    <div class="game-div">
+        <div id="result" class="result"><img src="" alt="Result" id="resultImage"></div>
+        <button class="back-button" id="backButton"><i class="fa fa-home fa-4x"></i></button>
+        <div id="playerInfo" class="player-info">
+            <p id="userNameDisplay"></p>
+            <p id="timerDisplay"></p>
+        </div>    
+        <div class="canvas-wrapper" id="canvas-wrapper">
+            <canvas></canvas>
+        </div>
+        <div class="main-background" id="main-background"></div>
+    </div>
+    <div id="rulesPopup" class="popup">
+        <div class=" popup-content">
+            <span id="closePopup" class="close-button">x</span>
+            <p id="rules-text">Game Rules
+                Objective:
+                
+                Connect the railway tracks to create a complete path from the starting point to the destination before the timer runs out.
+                Gameplay:
+                
+                The game board consists of tiles representing different railway pieces (straight tracks, curves, bridges, etc.).
+                Click on a tile to change its type or rotate it to fit the path.
+                Tiles must align correctly with adjacent tiles to form a valid connection.
+                Scoring:
+                
+                Earn points for each correctly placed and connected tile.
+                Complete the path to earn bonus points.
+                Timer:
+                
+                You have 20 minutes to complete the railway path. The timer is visible on the screen.
+                If the timer reaches zero before completing the path, you lose the game.
+                Tile Placement:
+                
+                Left-click a tile to cycle through available track types (straight, curve, etc.).
+                Right-click a tile to rotate it by 90° increments.
+                Winning Conditions:
+                
+                Successfully create a continuous railway path from the start tile to the destination tile.
+                Losing Conditions:
+                
+                Fail to complete the railway path within the allotted time.
+                Place a tile that creates an invalid or incomplete connection </p>
+        </div>
+    </div>
+</body>
+</html>
